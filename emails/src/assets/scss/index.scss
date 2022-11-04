@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;700;900&display=swap');
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+* {
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.nc-email-message-wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #EEEEEE;
+}
+
+.nc-email-message {
+  width: 100%;
+  max-width: 60rem;
+  min-height: 63rem;
+  background-color: white;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @include respond(mobile) {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  &__header {
+    padding: 6rem 0 0 6rem;
+
+    @include respond(mobile) {
+      padding: 6rem 4rem 0 4rem;
+    }
+  }
+
+  &__header-line {
+    margin-top: 4rem;
+  }
+
+  &__main {
+    padding: 4rem 5.9rem 0 6rem;
+    flex: 1 0 0;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @include respond(mobile) {
+      padding: 4rem 4rem 0 4rem;
+    }
+  }
+
+  &__footer {
+    padding: 3rem 6rem;
+    background-color: #013046;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond(mobile) {
+      display: block;
+
+      padding: 3rem 4rem;
+    }
+  }
+
+  &__footer-main {
+    @include respond(mobile) {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.nc-email-message-main {
+  &__subtitle {
+    margin-top: 2rem;
+
+    @include respond(mobile) {
+      margin-top: 2.4rem;
+    }
+  }
+
+  &__action {
+    margin-top: 4rem;
+
+    @include respond(mobile) {
+      margin-top: 3rem;
+    }
+  }
+}
+
+.nc-email-logo {
+  display: block;
+  width: 12.5rem;
+  height: 4.4rem;
+}
+
+.nc-email-line {
+  height: 0.2rem;
+  width: 100%;
+  border-bottom: 0.2rem solid #E5EBEE;
+}
+
+.nc-email-title {
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+  color: #013046;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+
+.nc-email-paragraph {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  color: #013046;
+}
+
+.nc-email-btn {
+  width: 100%;
+  height: 4.6rem;
+
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  font-weight: 900;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.05s linear;
+
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  font-family: 'Roboto', sans-serif;
+  
+  @include respond(mobile) {
+    font-size: 1.6rem;
+    line-height: 18rem;
+    height: 4rem;
+  }
+}
+
+.nc-email-btn-yellow {
+  background-color: #FCB614;
+  color: #013046;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.75;
+  }
+}
+
+.nc-email-footer-main {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  @include respond(mobile) {
+    display: block;
+  }
+
+  &__logo {
+    margin-right: 1rem;
+    width: 4.4rem;
+    height: 1.6rem;
+
+    @include respond(mobile) {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__label {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+  }
+}
+
+.nc-email-footer-socials {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  @include respond(mobile) {
+    justify-content: flex-start;
+  }
+
+  &__item {
+    list-style-type: none;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__elem {
+    display: block;
+  }
+}
+
+.nc-email-message-aside {
+  padding-bottom: 4rem;
+}
+
+.nc-email-message-who {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  color: #013046;
+}
+
+// cp -:- COMPLETE PROFILE
+.nc-email-btn-cp {
+  width: 20.9rem;
+
+  @include respond(mobile) {
+    width: 19rem;
+  }
+}

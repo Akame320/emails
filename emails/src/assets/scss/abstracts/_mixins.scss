@@ -1,0 +1,71 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == desktop-small {
+    @media screen and (max-width: $nc-desktop-small) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-xsmall {
+    @media screen and (max-width: $nc-desktop-xsmall) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet-large {
+    @media screen and (max-width: $nc-tablet-large) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media screen and (max-width: $nc-tablet) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media screen and (max-width: $nc-mobile) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile-small {
+    @media screen and (max-width: $nc-mobile-small) {
+      @content;
+    }
+  }
+}
+
+@mixin nc-make-btn() {
+  transition: all 0.05s linear;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  border: none;
+  cursor: pointer;
+  tab-index: 1;
+  border-radius: 100px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+}
+
+@mixin nc-simple-hover() {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  transition: all 0.05s linear;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
